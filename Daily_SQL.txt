@@ -1,4 +1,6 @@
 SQL Q/A:
 
-08/07/2025
+09/07/2025
 exmaple answer
+SELECT *
+FROM POPULATION 
