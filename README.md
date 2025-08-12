@@ -1,7 +1,5 @@
 # SQL_Daily_Practice
 
-# SQL Daily Practice
-
 This repository contains my daily SQL practice queries, organized by topic and difficulty level.  
 It’s designed to help me (and others) strengthen SQL skills for real-world data analysis and technical assessments.
 
