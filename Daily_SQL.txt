@@ -1,6 +1,73 @@
-SQL Q/A:
+SQL Practice:
 
-09/07/2025
-exmaple answer
-SELECT *
-FROM POPULATION 
+Joins:
+
+8/11/2025
+
+Question #1:
+Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is 'Asia'.
+
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+
+Input Format
+
+The CITY and COUNTRY tables are described as follows:
+
+
+Answer:
+SELECT SUM(cc.population) 
+FROM country c
+INNER JOIN city cc
+    ON c.code = cc.countrycode
+WHERE continent = 'Asia';
+
+Question #2:
+Given the CITY and COUNTRY tables, query the names of all cities where the CONTINENT is 'Africa'.
+
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+
+Input Format
+
+The CITY and COUNTRY tables are described as follows:
+
+
+Answer:
+SELECT cc.NAME
+FROM COUNTRY c
+JOIN CITY cc
+    ON c.Code = cc.CountryCode
+WHERE CONTINENT = 'Africa';
+
+Question #3:
+Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and their respective average city populations (CITY.Population) rounded down to the nearest integer.
+
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+
+Input Format
+
+The CITY and COUNTRY tables are described as follows:
+
+Anser:
+SELECT 
+    c.Continent,
+    FLOOR(AVG(cc.Population)) AS avg_city_population
+FROM Country AS c
+JOIN City AS cc
+    ON c.Code = cc.CountryCode
+GROUP BY c.Continent; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
